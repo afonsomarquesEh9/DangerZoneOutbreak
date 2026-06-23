@@ -5,7 +5,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
+from code.Const import WIN_WIDTH, MENU_OPTION, C_WHITE, YELLOW, O_RED, WHITE
 
 
 class Menu:
@@ -21,12 +21,18 @@ class Menu:
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "Danger", C_ORANGE, ((WIN_WIDTH / 2), 70))
-            self.menu_text(50, "Zone", C_ORANGE, ((WIN_WIDTH / 2), 120))
+            self.menu_text(45, "Danger", O_RED, ((WIN_WIDTH / 2), 70))
+            self.menu_text(45, "Zone", O_RED, ((WIN_WIDTH / 2), 120))
+            self.menu_text(18, "PLAYER 1", C_WHITE,  (80, 100))
+            self.menu_text(16, "WASD - Move", C_WHITE, (80, 120))
+            self.menu_text(16, "SPACE - Shoot", C_WHITE, (80, 140))
+            self.menu_text(18, "PLAYER 2", WHITE, (WIN_WIDTH - 80, 100))
+            self.menu_text(16, "ARROWS - Move", WHITE, (WIN_WIDTH - 80, 120))
+            self.menu_text(16, "ENTER - shoot", WHITE, (WIN_WIDTH - 80, 140))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(20, MENU_OPTION[i], YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
                 else:
                     self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
             pygame.display.flip()
@@ -51,7 +57,7 @@ class Menu:
                         return MENU_OPTION[menu_option]
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
+        text_font: Font = pygame.font.SysFont(name="Courier New", size=text_size, bold=True)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)

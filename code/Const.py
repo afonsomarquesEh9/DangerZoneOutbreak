@@ -6,6 +6,12 @@ C_YELLOW = (255, 255, 128)
 C_WHITE = (255, 255, 255)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
+YELLOW = (255, 255, 0)
+BLACK = (0, 0, 0)
+L_CYAN = (224, 255, 255)
+O_RED = (255,69,0)
+WHITE = (250, 250, 250)
+
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -125,8 +131,8 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
-                    'Player2': pygame.K_LCTRL}
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_RETURN,
+                    'Player2': pygame.K_SPACE}
 
 # S
 SPAWN_TIME = 4000

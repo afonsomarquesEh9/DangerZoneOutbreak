@@ -17,13 +17,13 @@ class Score:
         pass
 
     def save(self, game_mode: str, player_score: list[int]):
-        pygame.mixer_music.load('./asset/Score.mp3')
+        pygame.mixer_music.load('./asset/VictoryTheme.mp3')
         pygame.mixer_music.play(-1)
         db_proxy = DBProxy('DBScore')
         name = ''
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.score_text(48, 'YOU WIN!!', C_YELLOW, SCORE_POS['Title'])
+            self.score_text(48, 'YOU WIN!!!', C_YELLOW, SCORE_POS['Title'])
             text = 'Enter Player 1 name (4 characters):'
             score = player_score[0]
             if game_mode == MENU_OPTION[0]:
@@ -69,7 +69,7 @@ class Score:
 
         for player_score in list_score:
             id_, name, score, date = player_score
-            self.score_text(20, f'{name}     {score:05d}     {date}', C_YELLOW,
+            self.score_text(20, f'{name}     {score:05}     {date}', C_WHITE,
                             SCORE_POS[list_score.index(player_score)])
         while True:
             for event in pygame.event.get():
@@ -82,7 +82,7 @@ class Score:
             pygame.display.flip()
 
     def score_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
+        text_font: Font = pygame.font.SysFont(name="Courier New", size=text_size, bold=True)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)

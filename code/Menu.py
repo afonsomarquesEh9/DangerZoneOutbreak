@@ -21,8 +21,8 @@ class Menu:
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(45, "Danger", O_RED, ((WIN_WIDTH / 2), 70))
-            self.menu_text(45, "Zone", O_RED, ((WIN_WIDTH / 2), 120))
+            self.menu_text(45, "Danger Zone", O_RED, ((WIN_WIDTH / 2), 70))
+            self.menu_text(45, "Outbreak", O_RED, ((WIN_WIDTH / 2), 120))
             self.menu_text(18, "PLAYER 1", C_WHITE,  (80, 100))
             self.menu_text(16, "WASD - Move", C_WHITE, (80, 120))
             self.menu_text(16, "SPACE - Shoot", C_WHITE, (80, 140))

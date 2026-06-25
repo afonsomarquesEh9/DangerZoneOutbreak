@@ -17,7 +17,7 @@ class Menu:
     def run(self):
         menu_option = 0
         pygame.mixer_music.load('./asset/Menu.mp3')
-        pygame.mixer_music.play(-1)
+        pygame.mixer_music.play(-1,0.0,10000)
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
@@ -28,7 +28,7 @@ class Menu:
             self.menu_text(16, "SPACE - Shoot", C_WHITE, (80, 140))
             self.menu_text(18, "PLAYER 2", C_WHITE, (WIN_WIDTH - 80, 100))
             self.menu_text(16, "ARROWS - Move", C_WHITE, (WIN_WIDTH - 80, 120))
-            self.menu_text(16, "ENTER - shoot", C_WHITE, (WIN_WIDTH - 80, 140))
+            self.menu_text(16, "ENTER - Shoot", C_WHITE, (WIN_WIDTH - 80, 140))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:

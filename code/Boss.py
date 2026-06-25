@@ -11,19 +11,19 @@ class Boss(Enemy):
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
         self.direction = 1
         self.entering = True
-        self.target_x = 400  # posição final na tela
+        self.target_x = 400  # final position on the screen
 
     def move(self):
-        # FASE 1: entrando da direita
+        # entering of right side of the screen
         if self.entering:
             self.rect.x -= ENTITY_SPEED[self.name]
 
-            # quando chegar na posição, muda de fase
+
             if self.rect.x <= self.target_x:
                 self.rect.x = self.target_x
                 self.entering = False
 
-        # FASE 2: movimento vertical
+        # vertical movement
         else:
             self.rect.y += ENTITY_SPEED[self.name] * self.direction
 
@@ -36,7 +36,7 @@ class Boss(Enemy):
         self.shot_delay -= 1
         if self.shot_delay <= 0:
             self.shot_delay = ENTITY_SHOT_DELAY[self.name]
-            if self.health < 300:
+            if self.health < 1000:
                 self.shot_delay = 35
             pygame.mixer.Sound('./asset/bossshot.wav').play()
             return EnemyShot(

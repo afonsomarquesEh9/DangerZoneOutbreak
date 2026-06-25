@@ -58,11 +58,11 @@ ENTITY_HEALTH = {
     'Player1Shot': 1,
     'Player2': 500,
     'Player2Shot': 1,
-    'Enemy1': 50,
+    'Enemy1': 150,
     'Enemy1Shot': 1,
-    'Enemy2': 60,
+    'Enemy2': 100,
     'Enemy2Shot': 1,
-    'Boss':1000,
+    'Boss':2000,
     'BossShot':1
 
 }
@@ -85,9 +85,9 @@ ENTITY_DAMAGE = {
     'Player2': 1,
     'Player2Shot': 25,
     'Enemy1': 1,
-    'Enemy1Shot': 20,
+    'Enemy1Shot': 35,
     'Enemy2': 1,
-    'Enemy2Shot': 15,
+    'Enemy2Shot': 30,
     'Boss':2,
     'BossShot':50
 }
@@ -113,16 +113,16 @@ ENTITY_SCORE = {
     'Enemy1Shot': 0,
     'Enemy2': 125,
     'Enemy2Shot': 0,
-    'Boss':1000,
+    'Boss':200,
     'BossShot':0
 }
 
 ENTITY_SHOT_DELAY = {
     'Player1': 15,
     'Player2': 15,
-    'Enemy1': 80,
+    'Enemy1': 100,
     'Enemy2': 100,
-    'Boss':100
+    'Boss':50
 }
 
 # M
@@ -145,11 +145,11 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RETURN,
                     'Player2': pygame.K_SPACE}
 
 # S
-SPAWN_TIME = 4000
+SPAWN_TIME = 2500
 
 # T
 TIMEOUT_STEP = 100  # 100ms
-TIMEOUT_LEVEL = 50000  # 20s
+TIMEOUT_LEVEL = 50000
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324

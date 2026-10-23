@@ -18,4 +18,11 @@ Projeto desenvolvido para fins de aprendizado, com foco na prática de programa�
 
 **Afonso Marques**
 
+### 📌 Créditos
+
+Projeto original: [MountainShooter](https://github.com/borinvini/MountainShooter), desenvolvido por [borinvini](https://github.com/borinvini).
+
+Este projeto foi clonado e modificado para fins de aprendizado.
+
+
 [GitHub](https://github.com/afonsomarquesEh9)
